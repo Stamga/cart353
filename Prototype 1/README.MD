@@ -22,8 +22,6 @@ The reason behind the openness of Sonus Room is to break away from the tedious p
 * Tried JSON, couldn't write more than 1 user at a time.
 * Tried long polling, server was capped at 1 second looping (sleep & usleep)
 * Tried short polling, 100ms, became super responsive and MySQL was able to handle it.
-
-
 * Will I need a separate library for a particle systems or will I be able to do it myself?
 * Will my server crash, slow down or shut down if there are too many users at once? If so, how many users?
 * How will having multiple instruments assigned randomly change the user experience?
