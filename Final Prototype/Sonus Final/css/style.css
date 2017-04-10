@@ -1,0 +1,219 @@
+body {
+	overflow: hidden;
+	font-family: "futura-pt";
+	color: #464d6c;
+}
+
+.ui-loader {
+	display: none;
+}
+
+.text-pink {
+	color: #ff3271;
+}
+
+#defaultCanvas0 {
+	opacity: 0;
+}
+
+.loaded .intro-instructions {
+	transform: translateY(0);
+}
+
+.loaded .intro {
+	transform: scale(1);
+	opacity: 1;
+}
+
+.loaded .intro-lines-diagonal {
+	transform: rotate(-20deg);
+}
+
+.started .intro-instructions {
+	transform: translateY(100%);
+	opacity: 0;
+}
+
+.started .intro {
+	transform: scale(1.5);
+	opacity: 0;
+}
+
+.started #defaultCanvas0 {
+	opacity: 1;
+}
+
+.started .intro-lines-diagonal {
+	transform: rotate(20deg);
+}
+
+.intro {
+	position: absolute;
+	top: 0;
+	right: 0;
+  	bottom: 210px;
+	left: 0;
+	max-width: 600px;
+	max-height: 180px;
+	margin: auto;
+	transform: scale(0.5);
+	transition: 1000ms all ease;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.intro-title {
+
+}
+
+.intro-title-text {
+	font-size: 150px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	z-index: 2;
+	position: relative;
+}
+
+.intro-lines {
+	overflow: hidden;
+	height: 340px;
+	position: absolute;
+	top: -51px;
+	right: 0;
+	left: 0;
+}
+
+.intro-lines:before {
+	content: "";
+	background-color: #fff;
+	display: block;
+	width: 85px;
+	height: 111px;
+	position: absolute;
+	top: 90px;
+	right: calc(50% - 55px);
+	z-index: 1;
+}
+
+.intro-lines:after {
+	content: "";
+	background-color: #fff;
+	display: block;
+	width: 85px;
+	height: 100px;
+	position: absolute;
+	top: 96px;
+	left: 125px;
+	z-index: 1;
+	border-radius: 100px;
+}
+
+.intro-lines-diagonal {
+	background-color: #dbe2e7;
+  height: 65px;
+  margin-top: 120px;
+  opacity: 0.7;
+  transform: rotate(0deg);
+  margin-left: -40px;
+  margin-right: -40px;
+	transition: 1000ms all ease;
+}
+
+.intro-instructions {
+	z-index: 3;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	transform: translateY(100%);
+	transition: 1000ms all ease;
+}
+
+.intro-instructions .intro-instructions-subtitle {
+	display: block;
+  font-size: 23px;
+	margin-top: 20px;
+	background-color: #e6ebee;
+	padding: 15px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
+	letter-spacing: 0.2em;
+}
+
+.intro-instructions .intro-instructions-keyboard {
+	font-size: 130px;
+	position: relative;
+	top: 10px;
+	color: #e6ebee;
+}
+
+.intro-instructions .intro-instructions-touch {
+	font-size: 130px;
+	margin-left: 10px;
+	color: #e6ebee;
+}
+
+
+@media (max-width: 720px) {
+
+	.intro {
+		max-width: 240px;
+		max-height: 80px;
+	}
+
+	.intro-lines-diagonal {
+    height: 25px;
+    margin-top: 80px;
+    margin-left: -40px;
+    margin-right: -40px;
+	}
+
+	.intro-title-text {
+    font-size: 60px;
+	}
+
+	.intro-line {
+		height: 180px;
+	}
+
+	.intro-lines:before {
+		content: "";
+    background-color: #fff;
+    display: block;
+    width: 30px;
+    height: 46px;
+    position: absolute;
+    top: 69px;
+    right: calc(50% - 23px);
+    z-index: 1;
+	}
+
+	.intro-lines:after {
+		content: "";
+    background-color: #fff;
+    display: block;
+    width: 44px;
+    height: 48px;
+    position: absolute;
+    top: 57px;
+    left: 45px;
+    z-index: 1;
+    border-radius: 100px;
+	}
+
+	.intro-instructions .intro-instructions-subtitle {
+    font-size: 14px;
+	}
+
+	.intro-instructions .intro-instructions-keyboard {
+		font-size: 80px;
+	}
+
+	.intro-instructions .intro-instructions-touch {
+		font-size: 80px;
+	}
+
+}
