@@ -9,9 +9,9 @@ header("Expires: 0"); // Proxies.
 clearstatcache();
 
 $servername = "localhost";
-$username = "fetivoco_stamga_sonus";
-$password = "l1,yNo?xarB]";
-$database = "fetivoco_stamga_sonus";
+$username = "USERNAME";
+$password = "PASSWORD";
+$database = "DBNAME";
 
 $db = new mysqli($servername, $username, $password, $database);
 
